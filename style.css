@@ -1,0 +1,250 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#container {
+	display: flex;
+}
+
+#navigation {
+	display: flex;
+	position: fixed;
+	width: 17vw;
+	gap: 30px;
+	height: 100vh;
+	flex-direction: column;
+	border-right: 1px solid rgb(224, 220, 220);
+	padding: 40px 0px 0px 40px; /* 내부 여백 (position을 사용하면 navigation 전체가 이동) */
+}
+
+.navigation--instagramlogo{
+	padding: 0px 0px 20px 0px;
+}
+
+.navigation--logo{
+	width: 24px;
+	height: 24px;
+}
+
+#navigation > div {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.navigation--menu {
+	padding-top: 150px;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	width: 56vw;
+	position: relative;
+	top: 50px;
+	left: 320px;
+}
+
+.main--story {
+	overflow: scroll;
+	display: flex;
+	gap: 15px;
+	width: 750px;
+}
+
+.main--story::-webkit-scrollbar {
+	display: none;
+}
+
+.main--story--profile > span {
+	padding: 5px 0px 0px 0px;
+}
+
+.main--story--profile > img {
+	width: 60px;
+	border-radius: 50px;
+	padding: 1px;
+	border: 1px solid rgb(224, 220, 220);
+}
+
+.main--story--profile {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main--post {
+	display: flex;
+	flex-direction: column;
+	padding: 50px 0px 0px 0px;
+}
+
+.main--post--detail {
+	display: flex;
+	align-items: center;
+	padding: 0px 0px 0px 100px;
+}
+
+.main--post--detail--writer {
+	width: 50px;
+	border-radius: 50px;
+	padding: 1px;
+	border: 1px solid rgb(224, 220, 220);
+}
+
+.main--post--detail--instagramer {
+	padding: 0px 0px 0px 20px;
+	font-weight: bold;
+}
+
+.main--post-detail--icon {
+	padding: 0px 0px 0px 230px;
+}
+
+.main--post--content{
+	padding: 10px 0px 0px 100px;
+}
+
+.main--post--detail--time {
+	color: rgb(129, 126, 126);
+	padding: 0px 0px 0px 10px;
+}
+
+.main--post--content--img {
+	width:450px;
+}
+
+.main--post--content--icon {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding-bottom: 20px;
+}
+
+.main--post--content--icon--bookmark {
+	padding: 0px 0px 0px 340px;
+}
+
+.main--post--content--like {
+	padding: 0px 0px 10px 0px;
+	font-weight: bold;
+	display: block;
+}
+
+.main--post--content--instagramer {
+	font-weight: bold;
+}
+
+.main--post--content--comment {
+	display: block;
+	padding: 10px 0px 0px 0px;
+	color: rgb(129, 126, 126);
+}
+
+#side {
+	position: relative;
+	left: 300px;
+	top: 50px;
+}
+.side--me {
+	display: flex;
+	align-items: center;
+}
+
+.side--me--profile {
+	width: 60px;
+	border-radius: 50px;
+	padding: 1px;
+	border: 1px solid rgb(224, 220, 220);
+}
+
+.side--me--nickname {
+	position: relative;
+	left: 20px;
+	font-weight: bold;
+}
+
+.side--me--transform {
+	position: relative;
+	font-size: small;
+	left: 170px;
+	font-weight: 500;
+	color: #2285E7;
+}
+
+.side--me--transform:hover {
+	color: black;
+	cursor: pointer;
+}
+
+.side--etc {
+	position: relative;
+	top: 20px;
+	display: flex;
+}
+
+.side--etc--viewall {
+	position: relative;
+	color: black;
+	font-weight: bold;
+	font-size: medium;
+	left: 130px;
+}
+
+.side--etc--recommend {
+	position: relative;
+	right: 20px;
+	color: gray;
+}
+
+.side--user--profile {
+	position: relative;
+	right: 20px;
+	border-radius: 50px;
+	padding: 1px;
+	border: 1px solid rgb(224, 220, 220);
+	width: 40px;
+}
+
+.side--user--recommenduser {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	right: 10px;
+}
+
+.side--user {
+	position: relative;
+	top: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.side--user--recommenduser--name {
+	color: black;
+	font-weight: bold;
+	font-size: small;
+}
+
+.side--user--recommenduser--other {
+	color: gray;
+}
+
+.side--user--follow {
+	font-size: small;
+	font-weight: 500;
+	color: #2285E7;
+}
+
+.side--user--follow:hover {
+	cursor:pointer;
+	color: black;
+}
+
+.side--users {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
