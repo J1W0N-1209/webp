@@ -6,6 +6,7 @@
 
 #container {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 #navigation {
@@ -16,14 +17,14 @@
 	height: 100vh;
 	flex-direction: column;
 	border-right: 1px solid rgb(224, 220, 220);
-	padding: 40px 0px 0px 40px; /* 내부 여백 (position을 사용하면 navigation 전체가 이동) */
+	padding: 40px 0 0 40px;
 }
 
-.navigation--instagramlogo{
-	padding: 0px 0px 20px 0px;
+.navigation--instagramlogo {
+	padding: 0 0 20px 0;
 }
 
-.navigation--logo{
+.navigation--logo {
 	width: 24px;
 	height: 24px;
 }
@@ -59,7 +60,7 @@
 }
 
 .main--story--profile > span {
-	padding: 5px 0px 0px 0px;
+	padding: 5px 0 0 0;
 }
 
 .main--story--profile > img {
@@ -78,13 +79,13 @@
 .main--post {
 	display: flex;
 	flex-direction: column;
-	padding: 50px 0px 0px 0px;
+	padding: 50px 0 0 0;
 }
 
 .main--post--detail {
 	display: flex;
 	align-items: center;
-	padding: 0px 0px 0px 100px;
+	padding: 0 0 0 100px;
 }
 
 .main--post--detail--writer {
@@ -95,25 +96,25 @@
 }
 
 .main--post--detail--instagramer {
-	padding: 0px 0px 0px 20px;
+	padding: 0 0 0 20px;
 	font-weight: bold;
 }
 
 .main--post-detail--icon {
-	padding: 0px 0px 0px 230px;
+	padding: 0 0 0 230px;
 }
 
-.main--post--content{
-	padding: 10px 0px 0px 100px;
+.main--post--content {
+	padding: 10px 0 0 100px;
 }
 
 .main--post--detail--time {
 	color: rgb(129, 126, 126);
-	padding: 0px 0px 0px 10px;
+	padding: 0 0 0 10px;
 }
 
 .main--post--content--img {
-	width:450px;
+	width: 450px;
 }
 
 .main--post--content--icon {
@@ -124,11 +125,11 @@
 }
 
 .main--post--content--icon--bookmark {
-	padding: 0px 0px 0px 340px;
+	padding: 0 0 0 340px;
 }
 
 .main--post--content--like {
-	padding: 0px 0px 10px 0px;
+	padding: 0 0 10px 0;
 	font-weight: bold;
 	display: block;
 }
@@ -139,7 +140,7 @@
 
 .main--post--content--comment {
 	display: block;
-	padding: 10px 0px 0px 0px;
+	padding: 10px 0 0 0;
 	color: rgb(129, 126, 126);
 }
 
@@ -148,6 +149,7 @@
 	left: 300px;
 	top: 50px;
 }
+
 .side--me {
 	display: flex;
 	align-items: center;
@@ -239,7 +241,7 @@
 }
 
 .side--user--follow:hover {
-	cursor:pointer;
+	cursor: pointer;
 	color: black;
 }
 
@@ -247,4 +249,129 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+	#navigation {
+		width: 15vw;
+	}
+
+	#main {
+		width: 70vw;
+		left: 200px;
+	}
+
+	#side {
+		left: 150px;
+	}
+
+	.main--story {
+		width: 90%;
+	}
+
+	.main--post--content--img {
+		width: 100%;
+	}
+}
+
+@media (max-width: 992px) {
+	#navigation {
+		width: 10vw;
+		padding: 20px 0 0 20px;
+	}
+
+	#main {
+		width: 80vw;
+		left: 120px;
+	}
+
+	#side {
+		left: 80px;
+		top: 40px;
+	}
+
+	.main--story {
+		width: 85%;
+	}
+
+	.main--post--detail {
+		padding: 0 0 0 80px;
+	}
+
+	.main--post--content {
+		padding: 10px 0 0 80px;
+	}
+
+	.main--post--content--img {
+		width: 100%;
+	}
+
+	.main--post-detail--icon {
+		padding: 0 0 0 180px;
+	}
+}
+
+@media (max-width: 768px) {
+	#navigation {
+		width: 8vw;
+		padding: 10px 0 0 10px;
+	}
+
+	#main {
+		width: 85vw;
+		left: 100px;
+	}
+
+	#side {
+		display: none;
+	}
+
+	.main--story {
+		width: 80%;
+	}
+
+	.main--post--detail {
+		padding: 0 0 0 60px;
+	}
+
+	.main--post--content {
+		padding: 10px 0 0 60px;
+	}
+
+	.main--post-detail--icon {
+		padding: 0 0 0 150px;
+	}
+}
+
+@media (max-width: 576px) {
+	#navigation {
+		width: 7vw;
+		padding: 5px 0 0 5px;
+	}
+
+	#main {
+		width: 90vw;
+		left: 80px;
+	}
+
+	.main--story {
+		width: 75%;
+	}
+
+	.main--post--detail {
+		padding: 0 0 0 40px;
+	}
+
+	.main--post--content {
+		padding: 10px 0 0 40px;
+	}
+
+	.main--post-detail--icon {
+		padding: 0 0 0 100px;
+	}
+
+	.main--post--content--img {
+		width: 100%;
+	}
 }
